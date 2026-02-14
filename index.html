@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLM Sophro — Solène Lemarié-Marchesse, Sophrologue Caycédienne à Indre (44610)</title>
+    <meta name="description" content="Sophrologue Caycédienne à Indre (44610), Nantes Métropole. Gestion du stress, sommeil, douleurs, accompagnement enfants et adultes. Séances individuelles et ateliers collectifs.">
+    <meta name="keywords" content="sophrologue, sophrologie, Indre, Nantes, caycédienne, stress, sommeil, endométriose, bien-être, relaxation">
+    <meta property="og:title" content="SLM Sophro — Solène Lemarié-Marchesse, Sophrologue Caycédienne">
+    <meta property="og:description" content="Retrouvez sérénité et bien-être grâce à la sophrologie. Séances individuelles et ateliers collectifs à Indre et Nantes Métropole.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* ========================================
+           CSS Variables & Reset
+           ======================================== */
+        :root {
+            --sage: #7C8C6E;
+            --sage-light: #A8B89C;
+            --sage-pale: #C5D1BC;
+            --cream: #F8F5EF;
+            --cream-warm: #F0EBE1;
+            --terracotta: #C4A882;
+            --terracotta-light: #D4C4A8;
+            --forest: #2D3B2D;
+            --forest-soft: #3D4F3D;
+            --orange: #E8842C;
+            --orange-light: #F4A95B;
+            --orange-pale: #FFF3E8;
+            --text-dark: #2A2A28;
+            --text-body: #4A4A46;
+            --text-light: #7A7A74;
+            --white: #FDFCFA;
+            --shadow-soft: 0 4px 30px rgba(45, 59, 45, 0.08);
+            --shadow-card: 0 8px 40px rgba(45, 59, 45, 0.10);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 40px;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-body);
+            background-color: var(--cream);
+            line-height: 1.7;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ========================================
+           Typography
+           ======================================== */
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--forest);
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
+        h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+        h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
+        h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+
+        .section-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .section-title {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--orange);
+            margin-top: 1rem;
+        }
+
+        /* ========================================
+           Layout
+           ======================================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        /* ========================================
+           Grain Overlay
+           ======================================== */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 256px 256px;
+        }
+
+        /* ========================================
+           Navigation
+           ======================================== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(248, 245, 239, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(124, 140, 110, 0.1);
+            transition: all 0.4s ease;
+            overflow: visible;
+        }
+
+        .nav.scrolled {
+            background: rgba(248, 245, 239, 0.95);
+            box-shadow: 0 2px 20px rgba(45, 59, 45, 0.06);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            overflow: visible;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+            width: 130px;
+        }
+
+        .nav-logo img {
+            height: 130px;
+            width: auto;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-body);
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: var(--sage);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--forest);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--orange);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: var(--radius-xl);
+            font-size: 0.85rem !important;
+            font-weight: 500;
+            transition: all 0.3s ease !important;
+        }
+
+        .nav-cta::after { display: none !important; }
+
+        .nav-cta:hover {
+            background: var(--orange-light) !important;
+            color: var(--white) !important;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(232, 132, 44, 0.3);
+        }
+
+        /* Mobile menu */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+        }
+
+        .nav-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--forest);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ========================================
+           Hero Section
+           ======================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 72px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        /* Organic shapes */
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 55%;
+            height: 100%;
+            object-fit: cover;
+            object-position: right center;
+            opacity: 0.4;
+            mask-image: linear-gradient(to left, rgba(0,0,0,0.6) 0%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.6) 0%, transparent 100%);
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 70%;
+            height: 120%;
+            background: radial-gradient(ellipse at center, rgba(168, 184, 156, 0.25) 0%, rgba(168, 184, 156, 0.08) 50%, transparent 70%);
+            border-radius: 50%;
+            animation: breathe 8s ease-in-out infinite;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            left: -5%;
+            width: 50%;
+            height: 80%;
+            background: radial-gradient(ellipse at center, rgba(196, 168, 130, 0.15) 0%, transparent 60%);
+            border-radius: 50%;
+            animation: breathe 8s ease-in-out infinite 4s;
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        .hero-decoration {
+            position: absolute;
+            top: 15%;
+            right: 8%;
+            width: 300px;
+            height: 300px;
+            opacity: 0.06;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+        }
+
+        .hero-eyebrow {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            width: 40px;
+            height: 1.5px;
+            background: var(--orange);
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            color: var(--forest);
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--sage);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            max-width: 520px;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--orange);
+            color: var(--white);
+            padding: 16px 36px;
+            border-radius: var(--radius-xl);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--orange-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(232, 132, 44, 0.3);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--forest);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 16px 4px;
+            transition: all 0.3s ease;
+            border-bottom: 1.5px solid var(--sage-light);
+        }
+
+        .btn-secondary:hover {
+            color: var(--sage);
+            border-color: var(--sage);
+        }
+
+        .btn-secondary svg {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-secondary:hover svg {
+            transform: translateX(3px);
+        }
+
+        /* Scroll indicator */
+        .hero-scroll {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-light);
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .hero-scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--sage-light), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 1; transform: scaleY(1); }
+            50% { opacity: 0.4; transform: scaleY(0.6); }
+        }
+
+        /* ========================================
+           About Section
+           ======================================== */
+        .about {
+            background: var(--white);
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, var(--sage-pale) 0%, var(--cream-warm) 100%);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-image-placeholder {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            font-weight: 600;
+            color: var(--sage);
+            opacity: 0.3;
+        }
+
+        .about-image-wrapper::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 120px;
+            height: 120px;
+            border: 2px solid var(--sage-pale);
+            border-radius: var(--radius-lg);
+            z-index: -1;
+        }
+
+        .about-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--forest);
+            line-height: 1.6;
+            padding: 1.5rem 0 1.5rem 1.5rem;
+            border-left: 3px solid var(--sage-light);
+            margin: 2rem 0;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: var(--text-body);
+        }
+
+        .about-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: var(--cream);
+            border: 1px solid rgba(124, 140, 110, 0.2);
+            border-radius: var(--radius-xl);
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--forest);
+        }
+
+        .badge svg {
+            width: 14px;
+            height: 14px;
+            color: var(--orange);
+        }
+
+        /* ========================================
+           Sophrology Section
+           ======================================== */
+        .sophrology {
+            position: relative;
+        }
+
+        .sophrology-intro {
+            max-width: 650px;
+            margin-bottom: 3.5rem;
+        }
+
+        .sophrology-intro p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 2rem 1.5rem;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(124, 140, 110, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(to right, var(--orange), var(--orange-light));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .benefit-card:hover::before {
+            opacity: 1;
+        }
+
+        .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--sage-pale), var(--cream-warm));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .benefit-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--forest);
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ========================================
+           Specialties Section
+           ======================================== */
+        .specialties {
+            background: var(--white);
+            position: relative;
+        }
+
+        .specialties-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .audience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .audience-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--cream);
+            border-radius: var(--radius-md);
+            transition: all 0.3s ease;
+        }
+
+        .audience-item:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .audience-icon {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            background: linear-gradient(135deg, var(--sage-pale), var(--cream-warm));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .audience-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+        }
+
+        .audience-item p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .specialty-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .specialty-tag {
+            padding: 12px 24px;
+            background: var(--cream);
+            border: 1px solid rgba(124, 140, 110, 0.15);
+            border-radius: var(--radius-xl);
+            font-size: 0.9rem;
+            color: var(--text-body);
+            transition: all 0.3s ease;
+        }
+
+        .specialty-tag:hover {
+            background: var(--sage-pale);
+            border-color: var(--sage-light);
+            color: var(--forest);
+        }
+
+        .specialty-tag.highlight {
+            background: var(--orange);
+            color: var(--white);
+            border-color: var(--orange);
+        }
+
+        .specialty-tag.highlight:hover {
+            background: var(--orange-light);
+            border-color: var(--orange-light);
+        }
+
+        /* ========================================
+           Pricing Section
+           ======================================== */
+        .pricing {
+            position: relative;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 4rem;
+        }
+
+        .price-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            border: 1px solid rgba(124, 140, 110, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .price-card:hover {
+            box-shadow: var(--shadow-card);
+            transform: translateY(-2px);
+        }
+
+        .price-card.featured {
+            border-color: var(--sage-light);
+            background: linear-gradient(135deg, var(--white) 0%, rgba(168, 184, 156, 0.08) 100%);
+        }
+
+        .price-card-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .price-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .price-amount {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--forest);
+        }
+
+        .price-amount span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        .price-detail {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+
+        /* Schedule */
+        .schedule-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .schedule-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 1.75rem;
+            border: 1px solid rgba(124, 140, 110, 0.08);
+        }
+
+        .schedule-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .schedule-card .location {
+            font-size: 0.8rem;
+            color: var(--sage);
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        .schedule-card .time {
+            font-size: 0.9rem;
+            color: var(--text-body);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .schedule-card .time svg {
+            width: 16px;
+            height: 16px;
+            color: var(--sage);
+        }
+
+        .schedule-card .time + .time {
+            margin-top: 0.4rem;
+        }
+
+        /* ========================================
+           Contact Section
+           ======================================== */
+        .contact {
+            background: var(--forest);
+            color: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(168, 184, 156, 0.08) 0%, transparent 60%);
+            border-radius: 50%;
+        }
+
+        .contact .section-label {
+            color: var(--sage-light);
+        }
+
+        .contact .section-title {
+            color: var(--cream);
+        }
+
+        .contact .section-title::after {
+            background: var(--sage);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info-text {
+            color: rgba(248, 245, 239, 0.7);
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-md);
+            transition: all 0.3s ease;
+            color: var(--cream);
+        }
+
+        .contact-link:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateX(4px);
+        }
+
+        .contact-link-icon {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            background: rgba(168, 184, 156, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-link-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--sage-light);
+        }
+
+        .contact-link-label {
+            font-size: 0.75rem;
+            color: rgba(248, 245, 239, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .contact-link-value {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .contact-zone {
+            margin-top: 2rem;
+        }
+
+        .contact-zone h3 {
+            color: var(--cream);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .zone-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .zone-tag {
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            font-size: 0.8rem;
+            color: rgba(248, 245, 239, 0.7);
+        }
+
+        /* Map placeholder */
+        .contact-map {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            padding: 2rem;
+        }
+
+        .contact-map-cta {
+            margin-top: 2rem;
+        }
+
+        .btn-primary-light {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--orange);
+            color: var(--white);
+            padding: 16px 36px;
+            border-radius: var(--radius-xl);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-light:hover {
+            background: var(--orange-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(232, 132, 44, 0.3);
+        }
+
+        /* ========================================
+           Footer
+           ======================================== */
+        .footer {
+            background: var(--forest);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 2rem 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: rgba(248, 245, 239, 0.4);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            color: rgba(248, 245, 239, 0.5);
+        }
+
+        .footer-social:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: var(--cream);
+        }
+
+        .footer-social svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* ========================================
+           Testimonials Section
+           ======================================== */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .testimonial-stars {
+            color: var(--orange);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-body);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--forest);
+        }
+
+        .testimonial-footer {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .testimonial-footer a {
+            color: var(--orange);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .testimonial-footer a:hover {
+            color: var(--orange-light);
+        }
+
+        /* ========================================
+           Scroll Animations
+           ======================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ========================================
+           Responsive
+           ======================================== */
+        @media (max-width: 1024px) {
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefit-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .specialties-layout {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-grid {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-bg-image {
+                width: 100%;
+                opacity: 0.4;
+                object-position: 80%;
+                mask-image: linear-gradient(to top, rgba(0,0,0,0.4) 50%, transparent 95%);
+                -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.4) 50%, transparent 95%);
+            }
+
+            .sophrology-images {
+                grid-template-columns: 1fr !important;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: rgba(248, 245, 239, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.25rem;
+                border-bottom: 1px solid rgba(124, 140, 110, 0.1);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .hero-content {
+                padding: 0;
+            }
+
+            .hero h1 {
+                font-size: clamp(2rem, 8vw, 2.8rem);
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero-scroll {
+                display: none;
+            }
+
+            .hero-decoration {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .about-image {
+                aspect-ratio: 4/3;
+                max-height: 300px;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .schedule-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===================== Navigation ===================== -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo"><img src="img/logo.png" alt="SLM Sophro"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#sophrologie">Sophrologie</a></li>
+                <li><a href="#specialites">Spécialités</a></li>
+                <li><a href="#temoignages">Avis</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== Hero ===================== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="img/generated/seance-individuelle-background.jpg" alt="" class="hero-bg-image">
+            <!-- Decorative leaf SVG -->
+            <svg class="hero-decoration" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100 10C100 10 140 50 140 100C140 150 100 190 100 190C100 190 60 150 60 100C60 50 100 10 100 10Z" stroke="currentColor" stroke-width="1" fill="none" opacity="0.5" color="#7C8C6E"/>
+                <path d="M100 10L100 190" stroke="#7C8C6E" stroke-width="0.5" opacity="0.5"/>
+                <path d="M70 50Q100 80 130 50" stroke="#7C8C6E" stroke-width="0.5" fill="none" opacity="0.4"/>
+                <path d="M65 80Q100 110 135 80" stroke="#7C8C6E" stroke-width="0.5" fill="none" opacity="0.4"/>
+                <path d="M65 110Q100 140 135 110" stroke="#7C8C6E" stroke-width="0.5" fill="none" opacity="0.4"/>
+                <path d="M70 140Q100 170 130 140" stroke="#7C8C6E" stroke-width="0.5" fill="none" opacity="0.4"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-eyebrow">Sophrologue Caycédienne</div>
+                <h1>Retrouvez <em>sérénité</em> et bien-être grâce à la sophrologie</h1>
+                <p class="hero-subtitle">Solène Lemarié-Marchesse vous accompagne à Indre&nbsp;(44610) et dans toute la métropole nantaise, en séances individuelles et ateliers collectifs.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary">
+                        Me contacter
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#sophrologie" class="btn-secondary">
+                        Découvrir la sophrologie
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="hero-scroll-line"></div>
+            <span>Défiler</span>
+        </div>
+    </section>
+
+    <!-- ===================== À propos ===================== -->
+    <section class="about" id="apropos">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper reveal">
+                    <div class="about-image">
+                        <img src="img/solene.webp" alt="Solène Lemarié-Marchesse, Sophrologue Caycédienne" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="section-label reveal">À propos</span>
+                    <h2 class="section-title reveal reveal-delay-1">Qui suis-je&nbsp;?</h2>
+                    <blockquote class="about-quote reveal reveal-delay-2">
+                        &laquo;&nbsp;C'est l'endométriose qui m'a fait découvrir la sophrologie. Aujourd'hui, je transmets ce qui m'a transformée.&nbsp;&raquo;
+                    </blockquote>
+                    <p class="reveal reveal-delay-2">Après 25 ans en tant qu'assistante administrative et une vie riche de scène — comédienne, improvisatrice, chanteuse — j'ai découvert la sophrologie comme un chemin vers le mieux-être face à l'endométriose.</p>
+                    <p class="reveal reveal-delay-3">Formée à la Sophrologie Caycédienne (2022-2024), je poursuis actuellement mon Master spécialiste avec SOFROCAY en Andorre. Passionnée par l'accompagnement de tous les publics, je me suis également formée à la pédagogie Sophro-Ludique® pour les enfants.</p>
+                    <p class="reveal reveal-delay-3">Depuis 2024, j'interviens également au Collège-Lycée Saint-Dominique, où j'accompagne les élèves dans la gestion du stress scolaire.</p>
+                    <div class="about-badges reveal reveal-delay-4">
+                        <span class="badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                            Sophrologie Caycédienne
+                        </span>
+                        <span class="badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                            Master SOFROCAY (en cours)
+                        </span>
+                        <span class="badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                            Sophro-Ludique®
+                        </span>
+                    </div>
+                    <div class="about-video reveal reveal-delay-4" style="margin-top:2rem;">
+                        <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;">
+                            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F999982915452055%2F&show_text=false&width=560&t=0"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+                                scrolling="no" frameborder="0" allowfullscreen="true"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== La Sophrologie ===================== -->
+    <section class="sophrology" id="sophrologie">
+        <div class="container">
+            <div class="sophrology-intro">
+                <span class="section-label reveal">Comprendre</span>
+                <h2 class="section-title reveal reveal-delay-1">La Sophrologie Caycédienne</h2>
+                <p class="reveal reveal-delay-2">La sophrologie est une pratique corps-esprit qui associe des exercices de respiration, des mouvements doux (relaxation dynamique) et de la visualisation positive. Accessible à tous, elle vous aide à mobiliser vos propres ressources pour retrouver équilibre et sérénité au quotidien.</p>
+            </div>
+            <div class="sophrology-images reveal" style="display:grid;grid-template-columns:1.5fr 1fr;gap:24px;margin-bottom:3rem;">
+                <img src="img/generated/seance-individuelle.webp" alt="Séance individuelle de sophrologie" style="width:100%;border-radius:var(--radius-md);object-fit:cover;aspect-ratio:16/9;">
+                <img src="img/generated/exercice-respiration.webp" alt="Exercice de respiration abdominale en sophrologie" style="width:100%;border-radius:var(--radius-md);object-fit:cover;aspect-ratio:16/9;">
+            </div>
+            <div class="benefit-grid">
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Gestion du stress</h3>
+                    <p>Apprenez à relâcher les tensions et à retrouver un état de calme profond grâce à des techniques simples et efficaces.</p>
+                </div>
+                <div class="benefit-card reveal reveal-delay-1">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </div>
+                    <h3>Sommeil apaisé</h3>
+                    <p>Retrouvez des nuits réparatrices en calmant le mental et en préparant le corps à un endormissement serein.</p>
+                </div>
+                <div class="benefit-card reveal reveal-delay-2">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h3>Confiance en soi</h3>
+                    <p>Renforcez votre estime personnelle et développez une vision positive de vous-même et de vos capacités.</p>
+                </div>
+                <div class="benefit-card reveal reveal-delay-3">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                            <line x1="6" y1="1" x2="6" y2="4"/>
+                            <line x1="10" y1="1" x2="10" y2="4"/>
+                            <line x1="14" y1="1" x2="14" y2="4"/>
+                        </svg>
+                    </div>
+                    <h3>Gestion de la douleur</h3>
+                    <p>Développez vos ressources internes pour mieux vivre avec la douleur chronique et retrouver du confort au quotidien.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== Spécialités ===================== -->
+    <section class="specialties" id="specialites">
+        <div class="container">
+            <span class="section-label reveal">Accompagnement</span>
+            <h2 class="section-title reveal reveal-delay-1">Pour qui&nbsp;?</h2>
+            <div class="specialties-layout">
+                <div class="audience-list">
+                    <div class="audience-item reveal">
+                        <div class="audience-icon">&#x1F9D2;</div>
+                        <div>
+                            <h3>Enfants</h3>
+                            <p>Dès le CP, apprendre à gérer ses émotions en s'amusant</p>
+                        </div>
+                    </div>
+                    <div class="audience-item reveal reveal-delay-1">
+                        <div class="audience-icon">&#x1F9D1;</div>
+                        <div>
+                            <h3>Adolescents</h3>
+                            <p>Confiance en soi, stress des examens, gestion des émotions</p>
+                        </div>
+                    </div>
+                    <div class="audience-item reveal reveal-delay-2">
+                        <div class="audience-icon">&#x1F9D8;</div>
+                        <div>
+                            <h3>Adultes</h3>
+                            <p>Stress, sommeil, douleurs, transitions de vie</p>
+                        </div>
+                    </div>
+                    <div class="audience-item reveal reveal-delay-3">
+                        <div class="audience-icon">&#x1F46A;</div>
+                        <div>
+                            <h3>Familles</h3>
+                            <p>Renforcer les liens et créer des moments de bien-être partagés</p>
+                        </div>
+                    </div>
+                    <div class="audience-item reveal reveal-delay-4">
+                        <div class="audience-icon">&#x1F3E2;</div>
+                        <div>
+                            <h3>Entreprises</h3>
+                            <p>QVT, gestion du stress professionnel, cohésion d'équipe</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="reveal" style="margin-bottom:2rem;border-radius:var(--radius-md);overflow:hidden;">
+                        <img src="img/generated/sophro-ludique-enfant.webp" alt="Sophro-ludique — exercice ludique avec un enfant" style="width:100%;display:block;aspect-ratio:4/3;object-fit:cover;">
+                    </div>
+                    <h3 class="reveal" style="margin-bottom: 1.5rem; font-size: 1.2rem;">Problématiques accompagnées</h3>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag reveal">Stress & anxiété</span>
+                        <span class="specialty-tag reveal reveal-delay-1">Troubles du sommeil</span>
+                        <span class="specialty-tag highlight reveal reveal-delay-1">Endométriose & douleurs chroniques</span>
+                        <span class="specialty-tag reveal reveal-delay-2">Stress scolaire</span>
+                        <span class="specialty-tag reveal reveal-delay-2">Confiance en soi</span>
+                        <span class="specialty-tag reveal reveal-delay-3">Cancer & fatigue profonde</span>
+                        <span class="specialty-tag reveal reveal-delay-3">QVT — Qualité de Vie au Travail</span>
+                        <span class="specialty-tag reveal reveal-delay-4">Préparation mentale</span>
+                        <span class="specialty-tag reveal reveal-delay-4">Gestion des émotions</span>
+                        <span class="specialty-tag reveal">Relaxation & mieux-être</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== Témoignages ===================== -->
+    <section id="temoignages">
+        <div class="container">
+            <span class="section-label reveal">Témoignages</span>
+            <h2 class="section-title reveal reveal-delay-1">Ce qu'en disent mes clients</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">&laquo;&nbsp;Ces séances sont comme une bulle temporelle, une sorte de cocon dans lequel on peut se ressourcer et se recentrer. Solène est une personne bienveillante et à l'écoute, qui sait s'adapter à chacun.&nbsp;&raquo;</p>
+                    <div class="testimonial-author">Sylvain Herault</div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">&laquo;&nbsp;Elle et ses exercices ont le pouvoir de créer une bulle de sérénité et de recentrage sur soi. On en ressort apaisé et plein de bonnes énergies.&nbsp;&raquo;</p>
+                    <div class="testimonial-author">B Christine</div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">&laquo;&nbsp;Elle est d'une grande douceur et d'une vraie bienveillance, ce qui met immédiatement en confiance. Ses séances sont un vrai moment de détente et de bien-être.&nbsp;&raquo;</p>
+                    <div class="testimonial-author">Emilie Tacheau</div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">&laquo;&nbsp;Ces moments de sophrologie me font un bien fou tous les mardi soir. Un vrai sas de décompression dans la semaine.&nbsp;&raquo;</p>
+                    <div class="testimonial-author">Wilfried Pioger</div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">&laquo;&nbsp;Détente absolue garantie&nbsp;!&nbsp;&raquo;</p>
+                    <div class="testimonial-author">Florence Augé</div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-3">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">&laquo;&nbsp;Très pro dans sa démarche. Ses séances sont toutes préparées avec soin. Au bout de 10 séances, je constate une vraie évolution dans ma gestion du stress.&nbsp;&raquo;</p>
+                    <div class="testimonial-author">Mathieu F</div>
+                </div>
+            </div>
+            <div class="testimonial-footer reveal">
+                <a href="https://share.google/g8JJXoshg6kd5QJci" target="_blank" rel="noopener">Voir tous les avis sur Google →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== Tarifs & Séances ===================== -->
+    <section class="pricing" id="tarifs">
+        <div class="container">
+            <span class="section-label reveal">Pratique</span>
+            <h2 class="section-title reveal reveal-delay-1">Tarifs & Séances</h2>
+
+            <div class="pricing-grid">
+                <div class="price-card featured reveal">
+                    <div class="price-card-label">Individuel</div>
+                    <h3>Séance en cabinet</h3>
+                    <p>Au cabinet de Basse-Indre. Mardi matin et jeudi après-midi.</p>
+                    <div class="price-amount">50€ <span>/ séance</span></div>
+                </div>
+                <div class="price-card reveal reveal-delay-1">
+                    <div class="price-card-label">Individuel</div>
+                    <h3>Séance à domicile</h3>
+                    <p>Je me déplace chez vous dans toute la métropole nantaise.</p>
+                    <div class="price-amount">50€ — 60€ <span>/ séance</span></div>
+                    <div class="price-detail">Selon la distance</div>
+                </div>
+                <div class="price-card reveal reveal-delay-2">
+                    <div class="price-card-label">Collectif</div>
+                    <h3>Atelier hebdomadaire</h3>
+                    <p>Séances collectives dans une ambiance bienveillante et conviviale.</p>
+                    <div class="price-amount">12€ <span>/ séance</span></div>
+                    <div class="price-detail">ou 100€ la carte de 10 séances</div>
+                </div>
+                <div class="price-card reveal reveal-delay-3">
+                    <div class="price-card-label">Entreprises & Associations</div>
+                    <h3>Interventions collectives</h3>
+                    <p>Ateliers sur-mesure pour vos collaborateurs ou adhérents.</p>
+                    <div class="price-amount" style="font-size: 2rem;">Sur devis</div>
+                </div>
+            </div>
+
+            <div class="reveal" style="margin-bottom:3rem;border-radius:var(--radius-lg);overflow:hidden;">
+                <img src="img/generated/atelier-collectif.webp" alt="Atelier collectif de sophrologie — exercices en groupe" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;">
+            </div>
+            <h2 class="schedule-title section-title reveal" style="text-align: center;">Planning hebdomadaire</h2>
+            <div class="schedule-grid">
+                <div class="schedule-card reveal">
+                    <h4>Cabinet — Basse-Indre</h4>
+                    <div class="location">Indre (44610)</div>
+                    <div class="time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Mardi matin
+                    </div>
+                    <div class="time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Jeudi après-midi
+                    </div>
+                </div>
+                <div class="schedule-card reveal reveal-delay-1">
+                    <h4>Le Taquin</h4>
+                    <div class="location">Indre</div>
+                    <div class="time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Lundi soir — 19h à 20h15
+                    </div>
+                </div>
+                <div class="schedule-card reveal reveal-delay-2">
+                    <h4>Centre socioculturel de la Bugallière</h4>
+                    <div class="location">Orvault</div>
+                    <div class="time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Mardi soir — 19h à 20h15
+                    </div>
+                </div>
+                <div class="schedule-card reveal reveal-delay-3">
+                    <h4>Centre socioculturel Allée Verte</h4>
+                    <div class="location">Saint-Sébastien-sur-Loire</div>
+                    <div class="time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Enfants (CP-CM2) — Lundi 17h30 à 18h30
+                    </div>
+                    <div class="time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Adultes — Mercredi 17h30-18h45 & 19h-20h15
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== Contact ===================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div>
+                    <span class="section-label reveal">Rendez-vous</span>
+                    <h2 class="section-title reveal reveal-delay-1">Prenons contact</h2>
+                    <p class="contact-info-text reveal reveal-delay-2">N'hésitez pas à me contacter pour toute question ou pour prendre rendez-vous. Je vous répondrai dans les meilleurs délais.</p>
+
+                    <div class="contact-links">
+                        <a href="tel:+33778872042" class="contact-link reveal reveal-delay-2">
+                            <div class="contact-link-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <div class="contact-link-label">Téléphone</div>
+                                <div class="contact-link-value">07 78 87 20 42</div>
+                            </div>
+                        </a>
+                        <a href="mailto:slm.sophro@gmail.com" class="contact-link reveal reveal-delay-3">
+                            <div class="contact-link-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <div class="contact-link-label">Email</div>
+                                <div class="contact-link-value">slm.sophro@gmail.com</div>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/slm.sophro/" target="_blank" rel="noopener" class="contact-link reveal reveal-delay-3">
+                            <div class="contact-link-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            </div>
+                            <div>
+                                <div class="contact-link-label">Instagram</div>
+                                <div class="contact-link-value">@slm.sophro</div>
+                            </div>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61556700498498" target="_blank" rel="noopener" class="contact-link reveal reveal-delay-4">
+                            <div class="contact-link-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            </div>
+                            <div>
+                                <div class="contact-link-label">Facebook</div>
+                                <div class="contact-link-value">SLM Sophro</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="contact-map reveal" style="background:url('img/basseindre.jpg') center/cover no-repeat;position:relative;">
+                        <div style="position:absolute;inset:0;background:rgba(45,59,45,0.82);border-radius:var(--radius-lg);"></div>
+                        <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3" color="var(--sage-light)">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <div class="contact-zone">
+                            <h3>Zone d'intervention</h3>
+                            <div class="zone-tags">
+                                <span class="zone-tag">Indre</span>
+                                <span class="zone-tag">Saint-Herblain</span>
+                                <span class="zone-tag">Couëron</span>
+                                <span class="zone-tag">Orvault</span>
+                                <span class="zone-tag">Sautron</span>
+                                <span class="zone-tag">St-Etienne-de-Montluc</span>
+                                <span class="zone-tag">Nantes</span>
+                                <span class="zone-tag">St-Sébastien-sur-Loire</span>
+                                <span class="zone-tag">Rezé</span>
+                                <span class="zone-tag">Bouguenais</span>
+                                <span class="zone-tag">La Montagne</span>
+                                <span class="zone-tag">St-Jean-de-Boiseau</span>
+                            </div>
+                        </div>
+                        <div class="contact-map-cta">
+                            <a href="mailto:slm.sophro@gmail.com" class="btn-primary-light">
+                                Prendre rendez-vous
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== Footer ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-copy">&copy; 2025 SLM Sophro — Solène Lemarié-Marchesse. Tous droits réservés.</div>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/slm.sophro/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61556700498498" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== JavaScript ===================== -->
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+
+        // Close mobile nav on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('open');
+            });
+        });
+
+        // Nav scroll effect
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
